@@ -43,44 +43,39 @@
 }
 
 :root {
-  /* Modern Minimalist Design Tokens */
-  --primary: #0F172A; /* Deep Navy */
-  --primary-foreground: #F8FAFC; /* Off-white */
-  --sidebar-primary: #0F172A;
-  --sidebar-primary-foreground: #F8FAFC;
-  --chart-1: #06B6D4; /* Vibrant Teal */
-  --chart-2: #0891B2;
-  --chart-3: #06B6D4;
-  --chart-4: #0F172A;
-  --chart-5: #1E293B;
-  --radius: 0.65rem;
-  --background: #F8FAFC; /* Off-white background */
-  --foreground: #0F172A; /* Deep navy text */
-  --card: #FFFFFF;
-  --card-foreground: #0F172A;
-  --popover: #FFFFFF;
-  --popover-foreground: #0F172A;
-  --secondary: #E2E8F0; /* Light gray */
-  --secondary-foreground: #1E293B;
-  --muted: #CBD5E1; /* Medium gray */
-  --muted-foreground: #64748B;
-  --accent: #06B6D4; /* Teal accent */
-  --accent-foreground: #FFFFFF;
+  --radius: 0.75rem;
+  --background: #09090B;
+  --foreground: #EDEDED;
+  --card: #141417;
+  --card-foreground: #EDEDED;
+  --popover: #141417;
+  --popover-foreground: #EDEDED;
+  --primary: #EDEDED;
+  --primary-foreground: #09090B;
+  --secondary: #1E1E22;
+  --secondary-foreground: #A1A1AA;
+  --muted: #27272B;
+  --muted-foreground: #71717A;
+  --accent: #60A5FA;
+  --accent-foreground: #09090B;
   --destructive: #EF4444;
-  --destructive-foreground: #FFFFFF;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
-  --ring: #06B6D4;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #0F172A;
-  --sidebar-accent: #06B6D4;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #E2E8F0;
-  --sidebar-ring: #06B6D4;
-}
-
-.dark {
-  /* Dark mode not used for this design */
+  --destructive-foreground: #FAFAFA;
+  --border: #1E1E22;
+  --input: #1E1E22;
+  --ring: #60A5FA;
+  --chart-1: #60A5FA;
+  --chart-2: #3B82F6;
+  --chart-3: #818CF8;
+  --chart-4: #F59E0B;
+  --chart-5: #EC4899;
+  --sidebar: #141417;
+  --sidebar-foreground: #EDEDED;
+  --sidebar-primary: #60A5FA;
+  --sidebar-primary-foreground: #09090B;
+  --sidebar-accent: #60A5FA;
+  --sidebar-accent-foreground: #09090B;
+  --sidebar-border: #1E1E22;
+  --sidebar-ring: #60A5FA;
 }
 
 @layer base {
@@ -90,6 +85,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  body {
+    scrollbar-color: rgba(96, 165, 250, 0.3) transparent;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
@@ -113,24 +112,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -141,25 +127,24 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
 }
 
-/* Smooth animations for modern minimalist design */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -168,18 +153,14 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-40px);
   }
   to {
     opacity: 1;
@@ -190,7 +171,7 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(40px);
   }
   to {
     opacity: 1;
@@ -201,7 +182,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
@@ -209,22 +190,119 @@
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(96, 165, 250, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(96, 165, 250, 0.3); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.7s ease-out forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.7s ease-out forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 0.7s ease-out forwards;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out;
+  animation: slideInRight 0.7s ease-out forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.5s ease-out;
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.glass {
+  background: rgba(20, 20, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60A5FA, #A78BFA, #F472B6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(96, 165, 250, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.08), rgba(139, 92, 246, 0.05), rgba(244, 114, 182, 0.05));
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+.card-hover:hover {
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 165, 250, 0.5);
 }
