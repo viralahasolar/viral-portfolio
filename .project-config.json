@@ -1,0 +1,42 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://3R2ycpKdSEDnoFS.root:HrbwElgB1ceq8690EF5d@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/YL7k2TPns2XUD4w8vA3hpf?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://3R2ycpKdSEDnoFS.root:HrbwElgB1ceq8690EF5d@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/YL7k2TPns2XUD4w8vA3hpf?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663674749772/YL7k2TPns2XUD4w8vA3hpf",
+    "access_key_id": "ASIAZV3A2ECZFFQ5YVI4",
+    "secret_access_key": "t7JMp1Xdk347YVqfex0E5C1hx36W0GyFbvJV3R0s",
+    "session_token": "IQoJb3JpZ2luX2VjEAgaCXVzLWVhc3QtMSJHMEUCIQChVRgRPrRip9sbjcHZyPZMpyeq5aI/+gyeCi3tJ4Fy+wIgYZwuE5aJbrUR5CiLWAa7CVcK5cTUUDTCyvx3KUN3tkcq/wMI0P//////////ARAEGgw2NjUzODYwOTg4NjYiDLEdKljbzrT0l7Gr4yrTA9h9ldz5auMUX/YSNQO6VsljMahp1y+0SmB/WR8qZilUJn3P1CmOaJMStvc5d3IPTE8KcXbF3v1sHLKZBMHo/QNBB+H/xdR68riKhJ9lbiIA9s4B+4Xlxgyqd0mi+hybIimzz0kqqwD+dXHRYltBSlEqsMOZUsVm2AEeenQWZbqeJLS0q4rC4CV7wddccZkaATD0CogoKmvaKqfxMkP0M8J50M3p0/8n61PsWB+33WhsvygoP77yQwsqVD5UYZQt543ky2EuW8ZhRmhMXZrzk2xIPXmMJiWsDgpgOZPchzgz+zPrxjt59xcDpS/3nbewE/7j4WpkcmB8nHORnEUq4NSa0MV3mFggFrXJH4idz0e8QbURy1n3+EdyO3cQ+3zH5VpvI/Dscx+8Yt6OUIFRjmEWWA6zV9T07+P22grukAR+yDSz4yHgeVufIB4wYw4JPYQKtaBWKbpu3LtW+rpPFd8EMLGZahVWOPwz+m1dnOFoPZgUWpbi6eoXe4aWW2jJ51TkHfGlVr1IewuCSWdY9YVCp+26hlWJl9ya2fHkJ9jcn+DqDNpdUhm0LVmIV9lqTo6t3cVul29xlVWxiJ3x36PvKywKorJ84esHNGMBO+XtzExXMIqcsNAGOp0BYXAmspJHcltCV+/u7kunwtdnPAGz5f+R0J5lTlrNCzFWA+DhWm/+68Yz1V4xgEQTWhMYb2gpc7c0M+OzlU62zGCxCpf4qOKtAsUx0LL7SO1qgLzXHqtPux5Q933eXldHS3lqMJOfhOfqF32ZItGM+MUfWY/G/yNpX8HDGyj9ku4PSxhTNE2Jl9vssyedD+W6jSISaSqGM2i8+f/IHw==",
+    "expiration": "2026-05-19T19:15:22.000Z"
+  },
+  "name": "viral-patel-portfolio",
+  "path": "/home/ubuntu/viral-patel-portfolio",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "Y2zotB6TMSq8EeVDdktRWJ",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "Vx3coXzYA3yfXXN4rVAcyK",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "viral Patel",
+    "OWNER_OPEN_ID": "h97iTToe2ma84SFpyFouz8",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "7e4ed874-8590-4df9-93f3-6c57599f4384",
+    "VITE_APP_ID": "YL7k2TPns2XUD4w8vA3hpf",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663674749772/OoEtZktojaUlmQXw.png",
+    "VITE_APP_TITLE": "Viral Patel | Software Developer Portfolio",
+    "VITE_FRONTEND_FORGE_API_KEY": "i9n7335MqmGHy5DH8w4Q8a",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
